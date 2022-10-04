@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fshow/ui/screens/home_screen.dart';
+import 'package:fshow/ui/widgets/shared/wrapper.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Fshow',
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: WrapperWidget(),
     );
   }
 }
