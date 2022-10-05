@@ -16,22 +16,21 @@ class _OptionLateralBarWidgetState extends State<OptionLateralBarWidget> {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
-        color: Colors.red,
         height: Get.height / 2,
         padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(width: 50, height: 50, decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.white),),
+            Container(width: 50, height: 50, decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.white),),
             InkWell(
               onTap: () {
                 print("Added new like");
               },
               child: Column(
                 children: [
-                  Icon(CupertinoIcons.heart),
+                  Icon(CupertinoIcons.heart, size: 40, color: Colors.white),
                   SizedBox(height: 5),
-                  Text("100")
+                  Text("100", style: TextStyle(color: Colors.white))
                 ],
               ),
             ),
@@ -41,9 +40,9 @@ class _OptionLateralBarWidgetState extends State<OptionLateralBarWidget> {
               },
               child: Column(
                 children: [
-                  Icon(CupertinoIcons.chat_bubble_text),
+                  Icon(CupertinoIcons.chat_bubble_text, size: 40, color: Colors.white),
                   SizedBox(height: 5),
-                  Text("100")
+                  Text("100", style: TextStyle(color: Colors.white))
                 ],
               ),
             ),
@@ -53,9 +52,9 @@ class _OptionLateralBarWidgetState extends State<OptionLateralBarWidget> {
               },
               child: Column(
                 children: [
-                  Icon(CupertinoIcons.bookmark),
+                  Icon(CupertinoIcons.bookmark, size: 40, color: Colors.white),
                   SizedBox(height: 5),
-                  Text("100")
+                  Text("100", style: TextStyle(color: Colors.white))
                 ],
               ),
             ),
@@ -65,9 +64,9 @@ class _OptionLateralBarWidgetState extends State<OptionLateralBarWidget> {
               },
               child: Column(
                 children: [
-                  Icon(Icons.share),
+                  Icon(Icons.share, size: 40, color: Colors.white),
                   SizedBox(height: 5),
-                  Text("100")
+                  Text("100", style: TextStyle(color: Colors.white),)
                 ],
               ),
             ),

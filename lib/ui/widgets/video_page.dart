@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fshow/ui/widgets/info_wrapper_widget.dart';
 import 'package:fshow/ui/widgets/option_lateral_bar.dart';
 import 'package:get/get.dart';
 import 'package:get/instance_manager.dart';
@@ -19,6 +21,7 @@ class _VideoPageWidgetState extends State<VideoPageWidget> {
     final videoSize = widget.controller.value.size;
     final videoHeight = videoSize.height;
     final videoWidth = videoSize.width;
+    final statusBarHeight = MediaQuery.of(context).viewPadding.top;
     return GestureDetector(
       onTap: () {
         setState(() {
@@ -44,14 +47,27 @@ class _VideoPageWidgetState extends State<VideoPageWidget> {
           Row(
             children: [
               Container(
-                width: Get.width / 2,
+                width: Get.width / 1.5,
+                height: Get.height,
                 color: Colors.blue,
+                child: const InfoWrapperWidget(),
               ),
               const Spacer(),
               SizedBox(
                 width: 80,
-                height: Get.height,
-                child: const OptionLateralBarWidget(),
+                height: Get.height - 180,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    InkWell(
+                        onTap: () {
+                          print("Search");
+                        },
+                        child: const Icon(CupertinoIcons.search,
+                            size: 35, color: Colors.white)),
+                    const OptionLateralBarWidget(),
+                  ],
+                ),
               ),
             ],
           ),
