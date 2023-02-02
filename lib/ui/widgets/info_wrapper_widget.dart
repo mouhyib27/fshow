@@ -19,7 +19,7 @@ class _InfoWrapperWidgetState extends State<InfoWrapperWidget> {
       child: Container(
         width: Get.width / 1.5,
         height: Get.height / 4,
-        color: Colors.green,
+        // color: Colors.green,
         padding: const EdgeInsets.all(15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

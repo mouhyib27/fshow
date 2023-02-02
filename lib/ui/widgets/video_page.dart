@@ -46,10 +46,10 @@ class _VideoPageWidgetState extends State<VideoPageWidget> {
           ),
           Row(
             children: [
-              Container(
+              SizedBox(
                 width: Get.width / 1.5,
                 height: Get.height,
-                color: Colors.blue,
+                // color: Colors.blue,
                 child: const InfoWrapperWidget(),
               ),
               const Spacer(),
